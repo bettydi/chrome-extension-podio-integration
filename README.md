@@ -51,7 +51,7 @@ yarn run dev
 
 ## References
 
-- [Chome Extension documentation](https://developer.chrome.com/docs/extensions/reference)
+- [Chrome Extension documentation](https://developer.chrome.com/docs/extensions/reference)
 - [Getting Started Tutorial - ~1hr](https://developer.chrome.com/docs/extensions/mv3/getstarted/)
 - [DevTools API](https://developer.chrome.com/docs/extensions/mv3/devtools/)
 - [Sample Code - extensions](https://github.com/GoogleChrome/chrome-extensions-samples)
