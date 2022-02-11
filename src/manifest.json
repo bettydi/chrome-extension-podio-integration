@@ -3,11 +3,11 @@
   "description": "DevTools for Podio Integration service traffic in WSUI",
   "version": "1.0",
   "manifest_version": 3,
-  "author": "betty.diegel@gmail.com",
+  "author": "betty.diegel@citrix.com",
   "background": {
-    "service_worker": "/js/background.js"
+    "service_worker": "background.js"
   },
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": ["storage", "activeTab", "scripting", "clipboardWrite"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {

@@ -1,3 +1,7 @@
+import React from "react";
+import {render} from "react-dom";
+import {Content} from "./Components/content";
+
 var _window;
 var _selectedRow;
 
@@ -51,20 +55,19 @@ function addRow(request, status, body) {
   var cell2 = row.insertCell(1);
   cell1.innerHTML = request.url;
   cell2.innerHTML = status;
-
-  var json = JSON.stringify(body, undefined, 4);
-  addRowClickHandler(row, json);
+  addRowClickHandler(row, body);
 }
 
 function addRowClickHandler(row, json) {
-  var contentElem = _window.document.getElementById("response-content");
+  var contentTree = _window.document.getElementById("json-view");
+
   var createClickHandler = function () {
     return function () {
       if (_selectedRow) {
         _selectedRow.classList.remove("selected");
       }
-      contentElem.innerHTML = json;
-      row.classList.add("selected");
+      const element = <Content json={json} />;
+      render(element, contentTree);
       _selectedRow = row;
     };
   };
